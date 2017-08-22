@@ -22,4 +22,8 @@ export class ProductDataService {
       .get<Product>('http://localhost:4730/products/'+id)
   }
 
+  public addProduct(product: Product): Observable<Product> {
+    return this.http.post('http://localhost:4730/products', product);
+  }
+
 }
