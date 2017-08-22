@@ -1,20 +1,20 @@
 import {Injectable} from '@angular/core';
-import {Observable} from "rxjs/Observable";
 import {Product} from "./product";
-import "rxjs/add/observable/of";
+import {Observable} from "rxjs/Observable";
 import {Http} from "@angular/http";
+import "rxjs/add/observable/of";
+import {HttpClient} from "@angular/common/http";
 import "rxjs/add/operator/map";
 
 @Injectable()
 export class ProductDataService {
 
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
   }
 
   public getProducts(): Observable<Product[]> {
     return this.http
-      .get('http://localhost:4730/products')
-      .map(response => response.json());
+      .get<Product[]>('http://localhost:4730/products')
   }
 
   //   [
