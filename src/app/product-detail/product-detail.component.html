@@ -1,10 +1,18 @@
 <p>
   product-detail works!
 </p>
-<div>
-  <a>{{product.id}}</a>
-  <a>{{product.title}}</a>
-  <a>{{product.description}}</a>
-  <a>{{product.price}}</a>
-  <a>{{product.image}}</a>
+<div *ngIf="product">
+  <dl>
+    <dt>id</dt>
+    <dd>{{product.id}}</dd>
+    <dt>title</dt>
+    <dd>{{product.title}}</dd>
+    <dt>description</dt>
+    <dd>{{product.description}}</dd>
+    <dt>price</dt>
+    <dd>{{product.price}}</dd>
+    <dt>image</dt>
+    <dd>{{product.image}}</dd>
+  </dl>
+  <a [routerLink]="['/products', product.id, 'edit']">edit</a>
 </div>

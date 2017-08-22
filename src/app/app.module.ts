@@ -9,6 +9,8 @@ import {ProductDataService} from "./shared/product-data.service";
 import {HttpClientModule} from "@angular/common/http";
 import {routing} from "./app.routing";
 import {ProductDetailComponent} from './product-detail/product-detail.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import {ProductDetailComponent} from './product-detail/product-detail.component'
     ProductDescriptionBoxComponent,
     ProductTitleComponent,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [ProductDataService],
   bootstrap: [AppComponent]

@@ -1,0 +1,22 @@
+<p>
+  product-edit works!
+</p>
+
+<form *ngIf="product" #form="ngForm" (ngSubmit)="save(form.value)">
+  <input type="text" required [(ngModel)]="product.title" name="title" #title="ngModel">
+  <div [hidden]="!title.errors?.required || title.pristine">
+    Title is required
+  </div>
+
+  <input type="text" [(ngModel)]="product.description" name="description" #description="ngModel">
+
+  <input type="number" required [(ngModel)]="product.price" name="price" #price="ngModel">
+  <div [hidden]="!price.errors?.required || price.pristine">
+    Price is required
+  </div>
+
+  <button type="submit" [disabled]="!form.valid">
+    Submit
+  </button>
+
+</form>
