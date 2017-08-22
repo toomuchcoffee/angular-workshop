@@ -1,8 +1,4 @@
 <div *ngFor="let product of products">
-  <a>{{product.id}}</a>
-  <a>{{product.title}}</a>
-  <a>{{product.description}}</a>
-  <a>{{product.price}}</a>
-  <a>{{product.image}}</a>
+  <a [routerLink]="['/products', product.id]">{{product.title}}</a>
 </div>
 
