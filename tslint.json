@@ -117,13 +117,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "idealo",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "idealo",
       "kebab-case"
     ],
     "use-input-property-decorator": true,
