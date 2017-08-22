@@ -9,9 +9,10 @@ import {ProductDataService} from "./shared/product-data.service";
 import {HttpClientModule} from "@angular/common/http";
 import {routing} from "./app.routing";
 import {ProductDetailComponent} from './product-detail/product-detail.component';
-import { ProductEditComponent } from './product-edit/product-edit.component';
+import {ProductEditComponent} from './product-edit/product-edit.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { ProductNewComponent } from './product-new/product-new.component';
+import {ProductNewComponent} from './product-new/product-new.component';
+import {ConfirmCandeactivateGuard} from "./shared/confirm-candeactivate.guard";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductNewComponent } from './product-new/product-new.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ProductDataService],
+  providers: [ProductDataService, ConfirmCandeactivateGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
