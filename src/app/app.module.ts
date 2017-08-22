@@ -13,6 +13,7 @@ import {ProductEditComponent} from './product-edit/product-edit.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ProductNewComponent} from './product-new/product-new.component';
 import {ConfirmCandeactivateGuard} from "./shared/confirm-candeactivate.guard";
+import { PrettyCurrencyPipe } from './shared/pretty-currency.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {ConfirmCandeactivateGuard} from "./shared/confirm-candeactivate.guard";
     ProductListComponent,
     ProductDetailComponent,
     ProductEditComponent,
-    ProductNewComponent
+    ProductNewComponent,
+    PrettyCurrencyPipe
   ],
   imports: [
     BrowserModule,
