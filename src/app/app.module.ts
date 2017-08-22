@@ -6,6 +6,7 @@ import { ProductDescriptionBoxComponent } from './product-description-box/produc
 import { ProductTitleComponent } from './product-title/product-title.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import {ProductDataService} from "./shared/product-data.service";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import {ProductDataService} from "./shared/product-data.service";
     ProductListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpModule
   ],
   providers: [ProductDataService],
   bootstrap: [AppComponent]
