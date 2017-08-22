@@ -1,0 +1,15 @@
+<p>
+  product-new works!
+</p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  id: <input type="number" formControlName="id">
+  title: <input type="text" formControlName="title">
+  price: <input type="number" formControlName="price">
+
+  <button type="submit" [disabled]="!form.valid">
+    Submit
+  </button>
+
+  <div [hidden]="!form.hasError('required', ['title'])">Fehler!</div>
+</form>

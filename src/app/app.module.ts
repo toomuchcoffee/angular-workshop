@@ -10,7 +10,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {routing} from "./app.routing";
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ProductNewComponent } from './product-new/product-new.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,15 @@ import {FormsModule} from "@angular/forms";
     ProductTitleComponent,
     ProductListComponent,
     ProductDetailComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductNewComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     routing,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ProductDataService],
   bootstrap: [AppComponent]
